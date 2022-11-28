@@ -9,6 +9,12 @@ typedef struct {
     enum MinorColor minorColorValue;
 } ColorPair;
 
+int numberOfMajorColors =
+    sizeof(majorColorNames) / sizeof(majorColorNames[0]);
+
+int numberOfMinorColors =
+    sizeof(minorColorNames) / sizeof(minorColorNames[0]);
+
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
