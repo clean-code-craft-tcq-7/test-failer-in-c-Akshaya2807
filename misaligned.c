@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include <assert.h>
 
+typedef struct {
+    enum MajorColor majorColorValue;
+    enum MinorColor minorColorValue;
+} ColorPair;
+
 int printColorMap() {
     const char* majorColor[] = {"White", "Red", "Black", "Yellow", "Violet"};
     const char* minorColor[] = {"Blue", "Orange", "Green", "Brown", "Slate"};
@@ -13,6 +18,24 @@ int printColorMap() {
     return i * j;
 }
 
+ColorPair GetColorFromPairNumber(int pairNumber) {
+    ColorPair colorPair;
+    int zeroBasedPairNumber = pairNumber - 1;
+    colorPair.majorColorValue = 
+        (enum MajorColor)(zeroBasedPairNumber / numberOfMinorColors);
+    colorPair.minorColorValue =
+        (enum MinorColor)(zeroBasedPairNumber % numberOfMinorColors);
+    return colorPair;
+}
+
+void testNumberToPair(int pairNumber,
+    enum MajorColor expectedMajor,
+    enum MinorColor expectedMinor)
+{
+    ColorPair colorPair = GetColorFromPairNumber(pairNumber);
+    assert(colorPair.minorColorValue == expectedMinor);
+    assert(colorPair.majorColorValue == expectedMajor);
+}
 int main() {
     int result = printColorMap();
     assert(result == 25);
