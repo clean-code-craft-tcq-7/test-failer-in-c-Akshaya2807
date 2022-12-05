@@ -51,9 +51,9 @@ void testNumberToPair(int pairNumber,
 
 int main() {
     printColorMap();
-    testNumberToPair(25,VIOLET,SLATE);
-    testNumberToPair(1,WHITE,BLUE);
-    testNumberToPair(19,YELLOW,BROWN);
+    testNumberToPair(14,BLACK,BROWN);
+    testNumberToPair(6,RED,BLUE);
+    testNumberToPair(20,YELLOW,SLATE);
     
     printf("All is well (maybe!)\n");
     return 0;
