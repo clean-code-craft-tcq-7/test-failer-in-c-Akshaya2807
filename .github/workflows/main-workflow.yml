@@ -15,7 +15,7 @@ jobs:
         g++ -Wall -Wextra -Werror tshirts.c -o tshirts.out
         ./tshirts.out
 
-    - name: misaligned fail
+    - name: alerter fail
       run: |
         g++ -Wall -Wextra -Werror alerter.c -o alerter.out
         ./alerter.out
