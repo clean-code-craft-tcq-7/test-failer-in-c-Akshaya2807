@@ -37,9 +37,9 @@ float SelectAlertEnvironment(float celcius, Environment environment_e)
 {
     float calculated_Value;
     
-   if(environment_e == prod)
+   if(environment_e == Production)
    {
-     calculated_Value = networkAlertProd(celcius);
+     calculated_Value = networkAlertProduction(celcius);
    }
    else
    {
@@ -65,9 +65,9 @@ void alertInCelcius(float farenheit) {
 int main() {
     alertInCelcius(380.5,Test);
     assert(alertFailureCount == 0);
-    alertInCelcius(303.6,prod);
+    alertInCelcius(303.6,Production);
     assert(alertFailureCount == 0);
-    alertInCelcius(515.5,prod);
+    alertInCelcius(515.5,Production);
     assert(alertFailureCount == 1);
     alertInCelcius(515.5,Test);
     assert(alertFailureCount == 1);
