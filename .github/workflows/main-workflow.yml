@@ -17,11 +17,11 @@ jobs:
 
     - name: misaligned fail
       run: |
-        g++ -Wall -Wextra -Werror misaligned.c -o misaligned.out
-        ./misaligned.out
-
-    - name: alerter fail
-      run: |
         g++ -Wall -Wextra -Werror alerter.c -o alerter.out
         ./alerter.out
+
+    - name: misaligned fail
+      run: |
+        g++ -Wall -Wextra -Werror misaligned.c -o misaligned.out
+        ./misaligned.out
         
