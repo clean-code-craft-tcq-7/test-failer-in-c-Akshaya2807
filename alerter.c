@@ -58,12 +58,12 @@ void alertInCelcius(float farenheit) {
     float celcius  = convertfarenheittocelcius(farenheit);
     int returnCode = SelectAlertEnvironment(celcius,environment_e);
     if (returnCode != 200) {
-     alertFailureCount ++;
+     alertFailureCount +=1;
     }
 }
 
 int main() {
-    alertInCelcius(410.5,Test);
+    alertInCelcius(380.5,Test);
     assert(alertFailureCount == 0);
     alertInCelcius(303.6,prod);
     assert(alertFailureCount == 0);
