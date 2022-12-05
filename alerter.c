@@ -54,7 +54,7 @@ float convertfarenheittocelcius(float farenheit)
     return celcius;
 }
 
-void alertInCelcius(float farenheit) {
+void alertInCelcius(float farenheit,Environment environment_e) {
     float celcius  = convertfarenheittocelcius(farenheit);
     int returnCode = SelectAlertEnvironment(celcius,environment_e);
     if (returnCode != 200) {
