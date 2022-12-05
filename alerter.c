@@ -5,7 +5,7 @@ int alertFailureCount = 0;
 
 typedef enum
 {
-   Production
+   Production,
    Test
 }Environment;
 
@@ -13,11 +13,11 @@ int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
     if(celcius<=200)
     {
-     return 200
+     return 200;
      }
     else
     {
-     return 500
+     return 500;
     }
 }
 
@@ -25,11 +25,11 @@ int networkAlertProduction(float celcius){
   
   if(celcius<=200)
   {
-     return 200
+     return 200;
   }
   else
   {
-    return 500
+    return 500;
   }
 }  
 
