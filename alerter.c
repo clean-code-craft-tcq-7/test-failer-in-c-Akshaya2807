@@ -22,7 +22,6 @@ int networkAlertStub(float celcius) {
 }
 
 int networkAlertProduction(float celcius){
-  
   if(celcius<=200)
   {
      return 200;
@@ -36,7 +35,6 @@ int networkAlertProduction(float celcius){
 float SelectAlertEnvironment(float celcius, Environment environment_e)
 {
     float calculated_Value;
-    
    if(environment_e == Production)
    {
      calculated_Value = networkAlertProduction(celcius);
