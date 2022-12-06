@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <assert.h>
+#include "alerterstub.h"
 
 int networkAlertStub(float celcius) {
     printf("ALERT: Temperature is %.1f celcius.\n", celcius);
